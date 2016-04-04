@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.sonarsource.parent</groupId>
+    <artifactId>parent</artifactId>
+    <version>31</version>
+  </parent>
+  <groupId>org.sonarsource.hipchat</groupId>
+  <artifactId>sonar-hipchat</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>HipChat Plugin for SonarQube</name>
+  <description>Notify HipChat when a project is analyzed by SonarQube</description>
+  <inceptionYear>2016</inceptionYear>
+
+  <modules>
+    <module>sonar-hitchat-plugin</module>
+  </modules>
+
+  <properties>
+    <maven.min.version>3.2</maven.min.version>
+  </properties>
+
+  <licenses>
+    <license>
+      <name>GNU LGPL 3</name>
+      <url>http://www.gnu.org/licenses/lgpl.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>simonbrandhof</id>
+      <name>Simon Brandhof</name>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git@github.com:SimonBrandhof/sonar-hipchat.git</connection>
+    <developerConnection>scm:git:git@github.com:SimonBrandhof/sonar-hipchat.git</developerConnection>
+    <url>https://github.com/SimonBrandhof/sonar-hipchat</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <ciManagement>
+    <system>travis-ci</system>
+    <url>https://travis-ci.org/SimonBrandhof/sonar-hipchat</url>
+  </ciManagement>
+
+</project>
