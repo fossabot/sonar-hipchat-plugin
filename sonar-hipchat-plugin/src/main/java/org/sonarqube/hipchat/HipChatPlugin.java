@@ -1,8 +1,4 @@
 /*
- * HipChat Plugin for SonarQube
- * Copyright (C) 2016-2016 SonarSource SA
- * mailto:contact AT sonarsource DOT com
- *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either
@@ -24,7 +20,7 @@ import org.sonar.api.Plugin;
 public class HipChatPlugin implements Plugin {
   @Override
   public void define(Context context) {
-    context.addExtensions(HipChatNotifier.class, HipChatSettings.class);
+    context.addExtensions(HipChatReporter.class, HipChatSettings.class);
     context.addExtensions(HipChatSettings.definitions());
   }
 }

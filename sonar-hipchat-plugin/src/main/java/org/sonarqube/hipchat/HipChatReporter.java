@@ -1,8 +1,4 @@
 /*
- * HipChat Plugin for SonarQube
- * Copyright (C) 2016-2016 SonarSource SA
- * mailto:contact AT sonarsource DOT com
- *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either
@@ -36,9 +32,9 @@ import org.sonar.api.utils.log.Loggers;
 
 import static java.lang.String.format;
 
-public class HipChatNotifier implements PostProjectAnalysisTask {
+public class HipChatReporter implements PostProjectAnalysisTask {
 
-  private static final Logger LOGGER = Loggers.get(HipChatNotifier.class);
+  private static final Logger LOGGER = Loggers.get(HipChatReporter.class);
   private static final String ERROR_COLOR = "red";
   private static final String WARNING_COLOR = "yellow";
 
@@ -48,7 +44,7 @@ public class HipChatNotifier implements PostProjectAnalysisTask {
   // TODO configure proxy
   private final OkHttpClient httpClient = new OkHttpClient.Builder().build();
 
-  public HipChatNotifier(I18n i18n, HipChatSettings settings, Server server) {
+  public HipChatReporter(I18n i18n, HipChatSettings settings, Server server) {
     this.i18n = i18n;
     this.settings = settings;
     this.server = server;
